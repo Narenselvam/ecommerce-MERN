@@ -20,7 +20,7 @@ const Product = ({ product }) => {
           />
         </Card.Text>
         <Card.Text as="h5">${product.price}</Card.Text>
-        <Card.Text as="p">{product.description}</Card.Text>
+        {/* <Card.Text as="p">{product.description}</Card.Text> */}
       </Card.Body>
     </Card>
   );
