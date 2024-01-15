@@ -1,6 +1,5 @@
 import express from "express";
-import mongoose from "mongoose";
-import products from "./products.js";
+import products from "./data/products.js";
 import 'dotenv/config'
 import connectDB from "./config/db.js"
 
