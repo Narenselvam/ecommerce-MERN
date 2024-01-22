@@ -11,6 +11,7 @@ import {
 } from "react-bootstrap";
 import { useGetProductDetailsQuery } from "../slices/productApiSlice";
 import Ratings from "../components/Ratings";
+import Loader from "../components/Loader";
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -25,7 +26,7 @@ const ProductScreen = () => {
         Go Back
       </Link>
       {isLoading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
         <div>{error?.data?.message || error.error}</div>
       ) : (
