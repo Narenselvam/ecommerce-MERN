@@ -8,8 +8,7 @@
     "start": "node server.js",
     "serv": "nodemon server.js",
     "client": "cd ../client && npm start",
-    "dev": "concurrently \"npm run client\" \"npm run serv\"",
-    "build": "concurrently \"npm install --prefix../client && npm run build --prefix../client\" \"npm install --prefix. && npm run build --prefix.\""
+    "dev": "concurrently \"npm run client\" \"npm run serv\""
   
   },
   "author": "",
