@@ -5,6 +5,7 @@ import connectDB from "./config/db.js"
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import cookieParser from "cookie-parser";
+import cors from 'cors';
 
 import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 
@@ -12,7 +13,13 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 connectDB()//DB CONNECTION
 
 const app = express()
-
+app.use(cors(
+    {
+        origin: ['https://eshoppe.vercel.app'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true
+    }
+))
 //Body parser middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
